@@ -48,5 +48,32 @@ int main() {
         j++;  // incrementa o contador
     } while (j <= movimentoRainha);  // condição de repetição
 
-    return 0; 
-}
+    // ============================================================
+    //              MOVIMENTO DO CAVALO (usando FOR + WHILE)
+    // ============================================================
+    // O cavalo se move em "L": duas casas em uma direção (horizontal ou vertical)
+    // e depois uma casa perpendicularmente.
+    //
+    // Neste caso: duas casas PARA BAIXO e uma casa PARA A ESQUERDA.
+    // Usaremos dois loops aninhados:
+    //   - Um loop FOR para as duas casas "para baixo"
+    //   - Um loop WHILE para a casa "para a esquerda"
+
+    int movimentoBaixo = 2;   // número de casas para baixo
+    int movimentoEsquerda = 1; // número de casas para a esquerda
+
+    printf("\nMovimento do Cavalo:\n");  // separação visual
+
+    // Loop externo: movimento para BAIXO (duas casas)
+    for (int a = 1; a <= movimentoBaixo; a++) {
+        printf("Baixo\n");
+    }
+
+    // Loop interno: movimento para a ESQUERDA (uma casa)
+    int b = 1;
+    while (b <= movimentoEsquerda) {
+        printf("Esquerda\n");
+        b++;
+    }
+    
+    return 0;
